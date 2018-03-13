@@ -36,33 +36,38 @@ Original image shows here.
 
 My pipeline consisted of following steps in sequence.
 
-1. Convert the images to grayscaled image (grayscale)
+#### 1. Convert the images to grayscaled image (grayscale)
 
 ![alt text][image2]
 
-2. Convert the image to blur image using gaussian blur filter (gaussian_blur)
+#### 2. Convert the image to blur image using gaussian blur filter (gaussian_blur)
+
 ![alt text][image3]
 
-3. Canny detection (canny)
-![alt text][image4]
+#### 3. Canny detection (canny)
     - LowThreshold to 20% of maximum grayscale
     - HighThreshold to 60% of maximum grayscale
 
-4. Mask off other than 'LEFT side'of interested region (region_of_interest)
+![alt text][image4]
+
+#### 4. Mask off other than 'LEFT side'of interested region (region_of_interest)
+
 ![alt text][image5]
 
-5. Hough Transform to detect only one best line (hough_lines)
-![alt text][image7]
+#### 5. Hough Transform to detect only one best line (hough_lines)
     - Detect only the 1st Line among detected lines
 
-6. Mask off other than 'RIGHT side'of interested region (region_of_interest)
+![alt text][image7]
+#### 6. Mask off other than 'RIGHT side'of interested region (region_of_interest)
 ![alt text][image6]
 
-7. Hough Transform to detect only one best line (hough_lines)
-![alt text][image8]
+#### 7. Hough Transform to detect only one best line (hough_lines)
     - Detect only the 1st Line among detected lines
 
-8. Display Weighted image (weighted_img)
+![alt text][image8]
+
+#### 8. Display Weighted image (weighted_img)
+
 ![alt text][image9]
 
 The 'Helper functions' are also modified for better detection.
